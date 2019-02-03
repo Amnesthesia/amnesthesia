@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { Article, Button, Layout, Wrapper } from '../Components';
 import config from '../Configuration/Config';
 import { media } from '../Configuration/media';
-import PageProps from '../Types/PageProps';
+import IPageProps from '../Types/IPageProps';
 
 const Homepage = styled.main`
   display: flex;
@@ -73,7 +73,7 @@ const HomepageContent: any = styled.div`
   text-align: ${(props: any) => (props.center ? 'center' : 'left')};
 `;
 
-export default class IndexPage extends React.Component<PageProps> {
+class IndexPage extends React.Component<IPageProps> {
   public render() {
     const { data } = this.props;
     const { edges, totalCount } = data.allMarkdownRemark;
@@ -135,7 +135,7 @@ export default class IndexPage extends React.Component<PageProps> {
     );
   }
 }
-export const IndexQuery = graphql`
+export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
       totalCount
@@ -155,3 +155,5 @@ export const IndexQuery = graphql`
     }
   }
 `;
+
+export default IndexPage;

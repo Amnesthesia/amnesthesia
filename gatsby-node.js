@@ -84,7 +84,7 @@ const createClassificationPages = ({ createPage, posts, postsPerPage, numPages }
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, 'App'), 'node_modules'],
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
   });
 };
@@ -119,6 +119,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
+      console.log('LOL ERROR');
       return Promise.reject(result.errors);
     }
     const posts = result.data.allMarkdownRemark.edges;
