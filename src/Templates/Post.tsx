@@ -1,4 +1,3 @@
-import 'Configuration/prismjs-theme.css';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
@@ -7,6 +6,7 @@ import styled from 'styled-components';
 import { Content, Header, Layout, PrevNext, SectionTitle, SEO, Subline, Wrapper } from '../Components';
 import Logo from '../Components/Logo';
 import config from '../Configuration/Config';
+import '../Configuration/prismjs-theme.css';
 import PathContext from '../Types/PathContext';
 import Post from '../Types/Post';
 
@@ -14,14 +14,14 @@ const PostContent = styled.div`
   margin-top: 4rem;
 `;
 
-interface Props {
+interface IPostPageProps {
   data: {
     markdownRemark: Post;
   };
   pathContext: PathContext;
 }
 
-export default class PostPage extends React.PureComponent<Props> {
+export default class PostPage extends React.PureComponent<IPostPageProps> {
   public render() {
     const { prev, next } = this.props.pathContext;
     const post = this.props.data.markdownRemark;

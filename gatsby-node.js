@@ -84,7 +84,7 @@ const createClassificationPages = ({ createPage, posts, postsPerPage, numPages }
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      modules: [path.resolve(__dirname, 'App'), 'node_modules'],
     },
   });
 };

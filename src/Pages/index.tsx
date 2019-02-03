@@ -1,4 +1,3 @@
-import { media } from 'Configuration/media';
 import { graphql, Link } from 'gatsby';
 import darken from 'polished/lib/color/darken';
 import lighten from 'polished/lib/color/lighten';
@@ -8,6 +7,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { Article, Button, Layout, Wrapper } from '../Components';
 import config from '../Configuration/Config';
+import { media } from '../Configuration/media';
 import PageProps from '../Types/PageProps';
 
 const Homepage = styled.main`
@@ -23,16 +23,6 @@ const Homepage = styled.main`
     flex-direction: column;
   }
 `;
-
-/**
- * background: ${(props: any) =>
-    props.background
-      ? `linear-gradient(
-      -185deg,
-      ${rgba(lighten(0.3, props.theme.colors.primary), 0.7)}, 
-      ${rgba(lighten(1.0, props.theme.colors.grey.dark), 0.9)}), url(/assets/bg/5.jpg) no-repeat`
-      : null};
- */
 
 const GridRow: any = styled.div`
   flex: 1;

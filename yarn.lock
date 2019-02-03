@@ -3739,7 +3739,7 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
 
 eslint-config-react-app@^3.0.0:
   version "3.0.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-react-app/-/eslint-config-react-app-3.0.6.tgz#addcae1359235941e95f3c96970b7ac8552e1130"
+  resolved "https://registry.yarnpkg.com/eslint-config-react-src/-/eslint-config-react-app-3.0.6.tgz#addcae1359235941e95f3c96970b7ac8552e1130"
   integrity sha512-VL5rA1EBZv7f9toc9x71or7nr4jRmwCH4V9JKB9DFVaTLOLI9+vjWLgQLjMu3xR9iUT80dty86RbCfNaKyrFFg==
   dependencies:
     confusing-browser-globals "^1.0.5"
