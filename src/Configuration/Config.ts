@@ -1,20 +1,20 @@
+/* tslint:disable */
 export default {
-  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
-
-  siteTitle: 'Danger Technologies', // Navigation and Site Title
-  siteTitleAlt: 'Danger Technologies', // Alternative Site title for SEO
-  siteUrl: 'dangertechnologies.com', // Domain of your site. No trailing slash!
-  siteLanguage: 'en', // Language Tag on <html> element
-  siteBanner: '/assets/banner.jpg', // Your image for og:image tag. You can find it in the /static folder
+  author: 'Victor Rudolfsson', // Author for schemaORGJSONLD
   defaultBg: '/assets/bg/5.jpg', // default post background header
   favicon: 'src/favicon.png', // Your image for favicons. You can find it in the /src folder
+  ogLanguage: 'en_US', // Facebook Language
+
+  pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
+
+  siteBanner: '/assets/banner.jpg', // Your image for og:image tag. You can find it in the /static folder
   siteDescription: 'A creative outlet and one-man development studio', // Your site description
-  author: 'Victor Rudolfsson', // Author for schemaORGJSONLD
+  siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/assets/logo.png', // Image for schemaORGJSONLD
   siteLogoLight: '/assets/logo-light.png', // Image for schemaORGJSONLD
-
-  userTwitter: '@fl0wsnake', // Twitter Username - Optional
-  ogLanguage: 'en_US', // Facebook Language
+  siteTitle: 'Danger Technologies', // Navigation and Site Title
+  siteTitleAlt: 'Danger Technologies', // Alternative Site title for SEO
+  siteUrl: 'http://dangertechnologies.com', // Domain of your site. No trailing slash!
 
   // Manifest and Progress color
   // See: https://developers.google.com/web/fundamentals/web-app-manifest/

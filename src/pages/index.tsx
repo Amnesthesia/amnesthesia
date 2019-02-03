@@ -1,14 +1,14 @@
 import { graphql, Link } from 'gatsby';
-import darken from 'polished/lib/color/darken';
 import lighten from 'polished/lib/color/lighten';
 import rgba from 'polished/lib/color/rgba';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+
 import { Article, Button, Layout, Wrapper } from '../Components';
 import config from '../Configuration/Config';
 import { media } from '../Configuration/media';
-import IPageProps from '../Types/IPageProps';
+import IPageProps from '../Types/PageProps';
 
 const Homepage = styled.main`
   display: flex;
@@ -73,7 +73,7 @@ const HomepageContent: any = styled.div`
   text-align: ${(props: any) => (props.center ? 'center' : 'left')};
 `;
 
-class IndexPage extends React.Component<IPageProps> {
+export class IndexPage extends React.Component<IPageProps> {
   public render() {
     const { data } = this.props;
     const { edges, totalCount } = data.allMarkdownRemark;
@@ -135,7 +135,7 @@ class IndexPage extends React.Component<IPageProps> {
     );
   }
 }
-export const query = graphql`
+export const IndexQuery = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
       totalCount

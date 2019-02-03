@@ -4888,7 +4888,7 @@ gatsby-source-filesystem@^2.0.4:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@^2.1.7:
+gatsby-transformer-remark@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.2.3.tgz#ff41222c66e679f647ad504a951e6a5cd2fe9ce4"
   integrity sha512-XYbP6fh4gYP+Cah5M1vk8mBzVBWMzLDg+nm4K0C6ZEXKP7vvmSr//rSAJeH45XXE+ki2uyuuMiHMBPrpbg0T8g==
@@ -4913,7 +4913,7 @@ gatsby-transformer-remark@^2.1.7:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby@^2.0.25:
+gatsby@^2.0.111:
   version "2.0.111"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.111.tgz#a0f9e794d878f3c77fe1996018ab44c4352c5105"
   integrity sha512-fmg8t/1SocUD1XqXAnLnVA66AdaJl9MRixF+he3LvDHh+9KrNsDGRRAjKAe/Qr4ujtcmsVmBk5Yho32YxwruoQ==
@@ -8675,7 +8675,7 @@ please-upgrade-node@^3.0.2, please-upgrade-node@^3.1.1:
   dependencies:
     semver-compare "^1.0.0"
 
-polished@^2.2.0:
+polished@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.3.tgz#bdbaba962ba8271b0e11aa287f2befd4c87be99a"
   integrity sha512-59V4fDbdxtH4I1m9TWxFsoGJbC8nnOpUYo5uFmvMfKp9Qh+6suo4VMUle1TGIIUZIGxfkW+Rs485zPk0wcwR2Q==

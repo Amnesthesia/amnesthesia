@@ -32,7 +32,7 @@ const Excerpt = styled.p`
   margin-bottom: 1rem;
 `;
 
-interface Props {
+interface IArticleProps {
   title: string;
   date: string;
   excerpt: string;
@@ -41,7 +41,7 @@ interface Props {
   category: string;
 }
 
-export class Article extends React.PureComponent<Props> {
+export class Article extends React.PureComponent<IArticleProps> {
   public render() {
     const { title, date, excerpt, slug, timeToRead, category } = this.props;
     const firstChar = title.charAt(0);
@@ -50,7 +50,7 @@ export class Article extends React.PureComponent<Props> {
       <Post>
         <Title>
           <Initiale>{firstChar}</Initiale>
-          <Link to={`/blog/${slug}`}>{title}</Link>
+          <Link to={`/posts/${slug}`}>{title}</Link>
         </Title>
         <Subline>
           {date} &mdash; {timeToRead} Min Read &mdash; In

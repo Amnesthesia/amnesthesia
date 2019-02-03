@@ -6,8 +6,11 @@ exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark' && _.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
     const slug = `${_.kebabCase(node.frontmatter.title)}`;
+    console.log({ slug });
     createNodeField({ node, name: 'slug', value: slug });
   }
+
+  console.log({ node: node && node.component });
 };
 
 const getPostsByType = (posts, classificationType) => {
@@ -119,7 +122,6 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      console.log('LOL ERROR');
       return Promise.reject(result.errors);
     }
     const posts = result.data.allMarkdownRemark.edges;
