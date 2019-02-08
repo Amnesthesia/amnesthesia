@@ -1,7 +1,6 @@
-import rgba from 'polished/lib/color/rgba';
 import styled from 'styled-components';
 
-interface Props {
+interface ISublineProps {
   theme: {
     fontSize: {
       small: number;
@@ -19,7 +18,15 @@ interface Props {
 }
 
 export const Subline: any = styled.div`
-  font-size: ${(props: Props) => props.theme.fontSize.small};
-  ${(props: Props) => props.light && `color: ${rgba(props.theme.colors.white, 0.7)}`};
-  ${(props: Props) => props.sectionTitle && 'text-align: center'};
+  font-size: ${(props: ISublineProps) => props.theme.fontSize.small};
+  background-color: #222222;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: ${props => props.theme.colors.white};
+  ${(props: ISublineProps) => props.sectionTitle && 'text-align: center'};
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
 `;

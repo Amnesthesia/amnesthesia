@@ -5,7 +5,7 @@ import { Article, Content, Header, Layout, Pagination, SectionTitle, Wrapper } f
 import config from '../Configuration/Config';
 import Data from '../Types/Data';
 
-interface Props {
+interface IBlogProps {
   data: Data;
   pageContext: {
     currentPage: number;
@@ -13,7 +13,7 @@ interface Props {
   };
 }
 
-export default class BlogPage extends React.Component<Props> {
+export default class BlogPage extends React.Component<IBlogProps> {
   public render() {
     const { currentPage, totalPages } = this.props.pageContext;
 

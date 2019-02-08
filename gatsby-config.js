@@ -17,6 +17,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-page-transitions',
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
@@ -31,6 +32,7 @@ module.exports = {
         path: `${__dirname}/src/Posts`,
       },
     },
+
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {

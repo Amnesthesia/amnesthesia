@@ -81,13 +81,13 @@ export const PaginationContent = styled.div`
       }
     `;
 
-interface Props {
+interface IPaginationProps {
   currentPage: number;
   totalPages: number;
   url: string;
 }
 
-export class Pagination extends React.PureComponent<Props> {
+export class Pagination extends React.PureComponent<IPaginationProps> {
   public render() {
     const { currentPage, totalPages, url } = this.props;
     const isFirst = currentPage === 1;

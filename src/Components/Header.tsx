@@ -46,12 +46,12 @@ const Content = styled.div`
   }
 `;
 
-interface Props {
-  children: any;
+interface IHeaderProps {
+  children?: any;
   banner?: string;
 }
 
-export class Header extends React.PureComponent<Props> {
+export class Header extends React.PureComponent<IHeaderProps> {
   public render() {
     return (
       <HeaderWrapper banner={this.props.banner || config.defaultBg}>

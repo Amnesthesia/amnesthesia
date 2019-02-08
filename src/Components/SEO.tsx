@@ -33,49 +33,49 @@ export const SEO = (props: ISEO) => {
   let schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
-      '@type': 'WebSite',
       '@id': blogURL,
-      url: blogURL,
-      name: title,
+      '@type': 'WebSite',
       alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+      name: title,
+      url: blogURL,
     },
   ];
   if (postSEO) {
     schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
-        '@type': 'BlogPosting',
         // @ts-ignore
         '@id': postURL,
+        '@type': 'BlogPosting',
         // @ts-ignore
-        url: postURL,
-        name: title,
         alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        author: {
+          '@type': 'Person',
+          name: config.author,
+        },
+        dateModified: postNode.frontmatter.date,
+        datePublished: postNode.frontmatter.date,
+        description: config.siteDescription,
         headline: title,
         image: {
           '@type': 'ImageObject',
           url: image,
         },
-        description: config.siteDescription,
-        datePublished: postNode.frontmatter.date,
-        dateModified: postNode.frontmatter.date,
-        author: {
-          '@type': 'Person',
-          name: config.author,
+        isPartOf: blogURL,
+        mainEntityOfPage: {
+          '@id': blogURL,
+          '@type': 'WebSite',
         },
+        name: title,
         publisher: {
           '@type': 'Organization',
-          name: config.author,
           logo: {
             '@type': 'ImageObject',
             url: config.siteUrl + realPrefix + config.siteLogo,
           },
+          name: config.author,
         },
-        isPartOf: blogURL,
-        mainEntityOfPage: {
-          '@type': 'WebSite',
-          '@id': blogURL,
-        },
+        url: postURL as string,
       },
     ];
   }
@@ -87,7 +87,6 @@ export const SEO = (props: ISEO) => {
       <meta name="image" content={image} />
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       <meta property="og:locale" content={config.ogLanguage} />
-      <meta property="og:site_name" content={config.ogSiteName ? config.ogSiteName : ''} />
       <meta property="og:url" content={postSEO ? postURL : blogURL} />
       {postSEO ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
@@ -95,7 +94,6 @@ export const SEO = (props: ISEO) => {
       <meta property="og:image" content={image} />
       <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ''} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:url" content={config.siteUrl} />
       <meta name="twitter:description" content={description} />

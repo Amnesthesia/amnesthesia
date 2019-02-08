@@ -1,8 +1,11 @@
 import Post from './Post';
 
-interface AllMarkdownRemark {
+interface IPageEdge {
+  node: Post;
+}
+interface IAllMarkdownRemark {
   totalCount: number;
-  edges: Array<{ node: Post }>;
+  edges: IPageEdge[];
 }
 
-export default AllMarkdownRemark;
+export default IAllMarkdownRemark;

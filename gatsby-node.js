@@ -6,11 +6,9 @@ exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark' && _.has(node, 'frontmatter') && _.has(node.frontmatter, 'title')) {
     const slug = `${_.kebabCase(node.frontmatter.title)}`;
-    console.log({ slug });
+    console.log({ frontmatter: node.frontmatter });
     createNodeField({ node, name: 'slug', value: slug });
   }
-
-  console.log({ node: node && node.component });
 };
 
 const getPostsByType = (posts, classificationType) => {
@@ -89,6 +87,21 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          loaders: ['html-loader', 'markdown-loader'],
+        },
+        {
+          test: /\.html$/,
+          loader: 'html-loader',
+          options: {
+            minimize: false,
+          },
+        },
+      ],
+    },
   });
 };
 
@@ -112,6 +125,7 @@ exports.createPages = ({ actions, graphql }) => {
               date
               title
               category
+              icon
               tags
               banner
             }

@@ -14,7 +14,7 @@ export default {
   siteLogoLight: '/assets/logo-light.png', // Image for schemaORGJSONLD
   siteTitle: 'Danger Technologies', // Navigation and Site Title
   siteTitleAlt: 'Danger Technologies', // Alternative Site title for SEO
-  siteUrl: 'http://dangertechnologies.com', // Domain of your site. No trailing slash!
+  siteUrl: 'https://dangertechnologies.com', // Domain of your site. No trailing slash!
 
   // Manifest and Progress color
   // See: https://developers.google.com/web/fundamentals/web-app-manifest/
