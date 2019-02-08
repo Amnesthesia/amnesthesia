@@ -6,7 +6,8 @@
 <url> <loc>http://dangertechnologies.com/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://dangertechnologies.com/tags/coding</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://dangertechnologies.com/tags/technology</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://dangertechnologies.com/posts/greyskull-lp-8-week-program</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://dangertechnologies.com/posts/aeventyr</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://dangertechnologies.com/posts/gslp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://dangertechnologies.com/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://dangertechnologies.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
